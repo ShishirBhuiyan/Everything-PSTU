@@ -85,4 +85,86 @@ ul {
 
 /* Media Query End */
 /* ======== Global End ========= */
+header .importantLinks {
+  height: 40px;
+  width: 100%;
+  background-color: #4d0300;
+  position: relative;
+}
+
+header .importantLinks .links {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  color: #fff;
+}
+
+header .importantLinks .links i {
+  font-size: 15px;
+  margin: 0 5px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+header .importantLinks .links i:hover {
+  margin-left: 10px;
+}
+
+header .importantLinks .search {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 100%;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+  z-index: 2;
+}
+
+header .importantLinks .search .input, header .importantLinks .search .btn {
+  padding: 5px;
+  border-radius: 0;
+  border: none;
+}
+
+header .importantLinks .search .btn {
+  cursor: pointer;
+}
+
+header .importantLinks .search.open {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+header .importantLinks .event {
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 2%;
+  height: 100%;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+}
+
+header .importantLinks .event .image img {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  z-index: 2;
+}
 /*# sourceMappingURL=style.css.map */
