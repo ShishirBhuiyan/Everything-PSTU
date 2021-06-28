@@ -85,6 +85,24 @@ ul {
 
 /* Media Query End */
 /* ======== Global End ========= */
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+
 header .importantLinks {
   height: 40px;
   width: 100%;
@@ -111,7 +129,7 @@ header .importantLinks .links {
 }
 
 header .importantLinks .links i {
-  font-size: 15px;
+  font-size: 13px;
   margin: 0 5px;
   -webkit-transition: .3s;
   transition: .3s;
@@ -159,12 +177,135 @@ header .importantLinks .event {
   height: 60px;
   width: 60px;
   border-radius: 50%;
+  z-index: 2;
 }
 
 header .importantLinks .event .image img {
   height: 60px;
   width: 60px;
   border-radius: 50%;
-  z-index: 2;
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 1px;
+  overflow: hidden;
+}
+
+header .slider {
+  height: 30vh;
+  width: 100%;
+  z-index: 1;
+  position: relative;
+  background-color: aqua;
+}
+
+header .slider .slick-dots {
+  display: none !important;
+}
+
+header .slider .slickItem {
+  height: 100%;
+  width: 100%;
+}
+
+header .slider .slickItem img {
+  height: 30vh;
+  width: 100%;
+}
+
+header .slider .slickItem .text {
+  display: block;
+  position: absolute;
+  width: 230px;
+  color: #fff;
+  top: 160px;
+  left: 16px;
+  background-color: black;
+  opacity: 0.5;
+  padding: 3px 10px;
+}
+
+header .slider .slickItem .text h2 {
+  color: #fff;
+  font-size: 16px;
+}
+
+header .slider .slickItem .text .reds {
+  height: 3px;
+  background-color: #610b00;
+  width: 150px;
+  margin: 5px 0;
+}
+
+header .slider .slickItem .text p {
+  display: none;
+}
+
+header .slider .slickItem.slick-active .text {
+  -webkit-animation: fadeInUp ease 2s;
+          animation: fadeInUp ease 2s;
+  opacity: 0.8 !important;
+}
+
+header .slider .slick-prev, header .slider .slick-next {
+  display: none !important;
+}
+
+header .slider .prev, header .slider .next {
+  position: absolute;
+  cursor: pointer;
+  top: 45%;
+  z-index: 3;
+  font-size: 15px;
+  height: 20px;
+  width: 20px;
+  background-color: black;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .slider .prev i, header .slider .next i {
+  color: white;
+}
+
+header .slider .prev {
+  left: 0%;
+}
+
+header .slider .next {
+  right: 0%;
+}
+
+header .slider::after {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: black;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
