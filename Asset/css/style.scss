@@ -1,6 +1,31 @@
-@import './component/layout/master';
+@import './component/master';
 @import './component/header';
 @import './component/sticky';
 
 
 
+/* Media Query Start */
+@media screen and(min-width:576px){ // --breakpoint-sm
+    @include sm_container();
+    //@include sm_header();
+}
+
+@media screen and(min-width: 768px){ // --breakpoint-md
+    @include md_container();
+    //@include md_header();
+}
+
+@media screen and(min-width: 992px){ //  --breakpoint-lg
+    @include lg_container();
+    @include header_importantlinks();
+    @include header_slider();
+    @include sticky_image();
+    @include sticky_header();
+    @include sticky_navigation();
+}
+
+@media screen and(min-width: 1200px){ //  --breakpoint-xl
+    @include xl_container();
+    //@include xl_header();
+}
+/* Media Query End */

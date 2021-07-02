@@ -4,15 +4,11 @@
     margin-left:auto;
     padding-right:5px;
     padding-left:5px;
-    min-height: 100vh;
-    border: 2px solid red;
 }
 
 
 @mixin sm_container{
     .containers{
-      padding-right:15px;
-      padding-left:15px;
       max-width: 640px;
     }
 }

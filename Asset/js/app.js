@@ -7,7 +7,7 @@ $(document).ready(function() {
 
     // Banner Slick Slider
     $('.content').slick({
-        dots: true,
+        dots: false,
         infinite: true,
         fade: true,
         cssEase: 'linear',
@@ -17,5 +17,14 @@ $(document).ready(function() {
         nextArrow:'.next'
         
     });
+
+    
+    $(".nav-links.dropdown").click(function(){
+        console.log(this);
+        $(this.lastElementChild).slideToggle();
+        //$('.mega').toggleClass('active');
+     });
+
+     console.log($(".nav-ul"));
 
 });

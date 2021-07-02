@@ -1,0 +1,226 @@
+.sticky{
+    .containers{
+        .holder{
+            .navigation{
+                position: absolute;
+                top: 100%;/* --------------------------------- */
+                width: 100%;
+                left: 0;
+                right: 0;
+                transition: display .3s;
+                pointer-events: painted;
+                z-index: 500;
+                display: block;
+                background-color: #272727;
+                .start{
+                    width: 100%;
+                    .links{
+                        flex: initial;
+                        width: 100%;
+                        .nav-ul{
+                            display: flex;
+                            flex-direction: column;
+                            .nav-links{
+                                width: 100%;
+                                border-bottom: 1px solid #fff;
+                                transition: .3s;
+                                padding:10px 10px;
+                                position: relative;
+                                a{
+                                    width: 100% !important;
+                                    letter-spacing: 1px;
+                                    font-size: 17px;
+                                    transition: .5s;
+                                    color: #fff;
+                                    &:hover{
+                                        color: chartreuse;
+                                    }
+                                }
+                                i{
+                                    position: absolute;
+                                    color: #ffffff;
+                                    right: 12px;
+                                    transition: all 650ms;
+                                    transform: rotate(0deg);
+                                    z-index: 2;
+                                }
+                                
+                                .mega{
+                                    width: 100%;
+                                    display: none;
+                                    .contents{
+                                        height: 100%;
+                                        width: 100%;
+                                        background-color: rgb(0, 141, 106);
+                                        .top{
+                                            width: 100%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            .first,.second,.third,.fourth{
+                                               display: flex;
+                                               align-items: center;
+                                               justify-content: space-between;
+                                               .one,.two{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border: 1px solid #fff;
+                                                    ul{
+                                                        li{
+                                                            padding: 5px 10px;
+                                                            color: #fff;
+                                                            span{
+                                                                color: rgb(255, 255, 255);
+                                                            }
+                                                            a{
+                                                               color: #fff;
+                                                               margin-left: 5px;
+                                                            }
+                                                            &:hover a{
+                                                                text-decoration: underline !important;
+                                                            }
+                                                        }
+                                                    }
+                                               }
+                                               .one{
+                                                background-color: rgb(73, 3, 17);
+                                               }
+                                               .two{
+                                                background-color: rgb(3, 73, 34);
+                                               }
+                                            }
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                        .nav-links:last-child{
+                            text-align: center;
+                            .btn{
+                                display: inline-block;
+                                padding: .5rem 1.3rem;
+                                font-size: .8rem;
+                                border: 2px solid  rgb(107, 0, 45);
+                                border-radius: 2rem;
+                                line-height: 1;
+                                margin: 0 .2rem;
+                                transition: .3s;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                &:hover{
+                                    color: #ffffff;
+                                    background-color:  rgb(107, 0, 45);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+@mixin sticky_navigation {
+    .sticky{
+        .containers{
+            .holder{
+            .navigation{
+                display: block;
+                z-index: 2 !important;
+                background-color: rgb(107, 0, 45);
+                .start{
+                    width: 70%;
+                    margin: 0 auto; 
+                    .links{
+                        flex: 0 0 100%;
+                        max-width: 100%;
+                        .nav-ul{
+                            height: 100%;
+                            flex-direction: row !important;
+                            position:  relative!important;
+                            align-items: center;
+                            background-color: rgb(255, 255, 255);
+                            .nav-links{
+                                position: initial !important;
+                                border: none;
+                                padding:5px 10px;
+                                a{
+                                    width: 100% !important;
+                                    letter-spacing: 1px;
+                                    font-size: 17px;
+                                    transition: .5s;
+                                    color: rgb(0, 0, 0);
+                                    &:hover{
+                                        color: chartreuse;
+                                    }
+                                }
+                                i{
+                                    position: unset !important;
+                                    color: rgb(107, 0, 45);
+                                    
+                                }
+                                
+                                .mega{
+                                    position: absolute !important;
+                                    left: 0 !important;
+                                    width: 60% !important;
+                                    right: 0;
+                                    margin: 0 auto;
+                                    top: 100%;
+                                    .contents{
+                                        height: 100%;
+                                        background-color: rgb(0, 141, 106);
+                                        .top{
+                                            width: 100%;
+                                            display: flex;
+                                            flex-direction: column;
+                                            .first,.second,.third,.fourth{
+                                               display: flex;
+                                               align-items: center;
+                                               justify-content: space-between;
+                                               .one,.two{
+                                                    width: 100%;
+                                                    height: 100%;
+                                                    border: 1px solid #fff;
+                                                    ul{
+                                                        li{
+                                                            padding: 5px 10px;
+                                                            color: #fff;
+                                                            span{
+                                                                color: rgb(255, 255, 255);
+                                                            }
+                                                            a{
+                                                               color: #fff;
+                                                               margin-left: 5px;
+                                                            }
+                                                            &:hover a{
+                                                                text-decoration: underline !important;
+                                                            }
+                                                        }
+                                                    }
+                                               }
+                                               .one{
+                                                background-color: rgb(73, 3, 17);
+                                               }
+                                               .two{
+                                                background-color: rgb(3, 73, 34);
+                                               }
+                                            }
+
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        }
+    }
+}

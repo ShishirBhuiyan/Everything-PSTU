@@ -1,0 +1,57 @@
+
+.sticky{
+    color: white;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100 !important;
+    height: 70px;/* -------------------------- */
+    .containers{
+        height: 100%;
+        width: 100%;
+        .holder{
+            position: relative;
+            height: 100%;
+            width: 100%;
+            background-color: rgb(107, 0, 45);
+            .image{
+                position: absolute;
+                left: 0px;
+                top: 0px;
+                bottom: 0px;
+                height: 100%;
+                width: 70px;
+                z-index: 100 !important;
+                img{
+                    height: 70px;
+                    width: 100%;
+                    display: block;
+                    //border: 2px solid black;
+                } 
+            }
+        }
+    }
+}
+
+
+
+@mixin sticky_image {
+    .sticky{
+        .containers{
+            .holder{
+                overflow: visible;
+                .image{
+                    top: 0px;
+                    left: 6% !important;
+                    width: 115px;
+                    height: 115px;
+                    z-index: 3;
+                    img{
+                        height: 100%;
+                        width: 100%;
+                    } 
+                }
+            }
+        }
+    }
+}

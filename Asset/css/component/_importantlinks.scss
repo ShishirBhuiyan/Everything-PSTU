@@ -1,15 +1,14 @@
 header{
-    // Also cange from slider component
+    margin-bottom: 1px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-bottom: 1px;
     overflow: hidden;
     .importantLinks{
         height: 40px;
         width: 100%;
-        background-color: rgb(77, 3, 0);
+        background-color: rgb(107, 0, 45);
         position: relative;
         // Social links
         .links{
@@ -40,6 +39,9 @@ header{
             transform: translateX(-110%);
             transition: transform .3s;
             z-index: 2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             .input,.btn{
                 padding: 5px;
                 border-radius: 0;
@@ -69,6 +71,53 @@ header{
                    height: 60px;
                    width: 60px;
                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin header_importantlinks {
+    header{
+        margin: 0;
+        overflow: hidden;
+        .importantLinks{
+            height: 50px;
+            position: relative;
+            // Social links
+            .links{
+              left: 10%;
+              i{
+                 font-size: 15px;
+                 margin: 0 10px;
+              }
+            }
+            // search form
+            .search{
+                top: 0;
+                left: 30%;
+                transform: translateX(20%);
+                opacity: 0;
+                z-index: 0;
+                pointer-events: none;
+            }
+            // show search form
+            .search.open{
+                opacity: 1;
+                z-index: 2;
+                pointer-events: visible;
+            }
+            // event photo
+            .event{
+                right: 10%;
+                height: 90px;
+                width: 90px;
+                .image{
+                    img{
+                       height: 90px;
+                       width: 90px;
+                    }
                 }
             }
         }
