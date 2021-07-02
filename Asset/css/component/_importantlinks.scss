@@ -6,7 +6,7 @@ header{
     justify-content: center;
     overflow: hidden;
     .importantLinks{
-        height: 40px;
+        height: 9vh;
         width: 100%;
         background-color: rgb(107, 0, 45);
         position: relative;
@@ -21,56 +21,90 @@ header{
           align-items: center;
           justify-content: center;
           color: #fff;
-          i{
+          padding: 0 10px;
+          i,a{
              font-size: 13px;
              margin: 0 5px;
              transition: .3s;
+             color: #fff; 
              &:hover{
                  margin-left: 10px;
              }
           }
-        }
-        // search form
-        .search{
-            position: absolute;
-            top: 100%;
-            left: 0;
-            height: 100%;
-            transform: translateX(-110%);
-            transition: transform .3s;
-            z-index: 2;
+          .top{
+            width: 100%;
             display: flex;
-            align-items: center;
-            justify-content: center;
-            .input,.btn{
-                padding: 5px;
-                border-radius: 0;
-                border: none;
-            }
-            .btn{
-                cursor: pointer;
-            }
-        }
-        // show search form
-        .search.open{
-            transform: translateX(0%);
+            display: none;
+          }
+          .bottom{
+              display: flex;
+              color: white;
+          }
         }
         // event photo
         .event{
             cursor: pointer;
             position: absolute;
             top: 0;
-            right: 2%;
+            right: 5%;
             height: 100%;
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
+            height: 80px;
+            width: 80px;
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            //border-radius: 50%;
             z-index: 2;
             .image{
                 img{
-                   height: 60px;
-                   width: 60px;
-                   border-radius: 50%;
+                   height: 80px;
+                   width: 80px;
+                   //border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+@mixin md-header_importantlinks {
+    header{
+        margin: 0;
+        overflow: hidden;
+        .importantLinks{
+            height: 10vh;
+            position: relative;
+            // Social links
+            .links{
+              left:5%;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: space-evenly;
+              .top,.bottom{
+                  width: 100%;
+                  display: flex;
+              }
+              i,a{
+                 font-size: 15px;
+                 margin: 0 10px;
+                 color: white;
+              }
+
+              .bottom{
+                  justify-content: flex-end;
+              }
+            }
+            // event photo
+            .event{
+                right: 2%;
+                height: 100px;
+                width: 120px;
+                background-color: black;
+                clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+                .image{
+                    
+                    img{
+                        height: 100px;
+                        width: 120px;
+                    }
                 }
             }
         }
@@ -78,47 +112,20 @@ header{
 }
 
 
+
 @mixin header_importantlinks {
     header{
         margin: 0;
         overflow: hidden;
         .importantLinks{
-            height: 50px;
+            height: 10vh;
             position: relative;
             // Social links
             .links{
               left: 10%;
-              i{
-                 font-size: 15px;
-                 margin: 0 10px;
-              }
             }
-            // search form
-            .search{
-                top: 0;
-                left: 30%;
-                transform: translateX(20%);
-                opacity: 0;
-                z-index: 0;
-                pointer-events: none;
-            }
-            // show search form
-            .search.open{
-                opacity: 1;
-                z-index: 2;
-                pointer-events: visible;
-            }
-            // event photo
             .event{
                 right: 10%;
-                height: 90px;
-                width: 90px;
-                .image{
-                    img{
-                       height: 90px;
-                       width: 90px;
-                    }
-                }
             }
         }
     }

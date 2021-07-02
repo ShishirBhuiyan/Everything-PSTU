@@ -1,9 +1,5 @@
 
 $(document).ready(function() {
-    // Search Document
-    $('.searchicon').click(function(){
-        $(".search").toggleClass("open");
-    }); 
 
     // Banner Slick Slider
     $('.content').slick({
@@ -25,6 +21,10 @@ $(document).ready(function() {
         //$('.mega').toggleClass('active');
      });
 
-     console.log($(".nav-ul"));
+     $('.toggles').click(function(){
+        $('.navigation').slideToggle();
+        //$('.mega').toggleClass('active');
+     });
+
 
 });

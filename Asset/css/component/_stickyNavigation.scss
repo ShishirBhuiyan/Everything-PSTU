@@ -10,8 +10,9 @@
                 transition: display .3s;
                 pointer-events: painted;
                 z-index: 500;
-                display: block;
+                display: none;
                 background-color: #272727;
+                cursor: pointer;
                 .start{
                     width: 100%;
                     .links{
@@ -101,17 +102,13 @@
                                 display: inline-block;
                                 padding: .5rem 1.3rem;
                                 font-size: .8rem;
-                                border: 2px solid  rgb(107, 0, 45);
+                                background-color:  rgb(107, 0, 45);
                                 border-radius: 2rem;
                                 line-height: 1;
                                 margin: 0 .2rem;
                                 transition: .3s;
                                 text-transform: uppercase;
                                 font-weight: bold;
-                                &:hover{
-                                    color: #ffffff;
-                                    background-color:  rgb(107, 0, 45);
-                                }
                             }
                         }
                     }
@@ -144,6 +141,7 @@
                             position:  relative!important;
                             align-items: center;
                             background-color: rgb(255, 255, 255);
+                            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
                             .nav-links{
                                 position: initial !important;
                                 border: none;

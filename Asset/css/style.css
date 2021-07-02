@@ -74,7 +74,7 @@ header {
 }
 
 header .importantLinks {
-  height: 40px;
+  height: 9vh;
   width: 100%;
   background-color: #6b002d;
   position: relative;
@@ -96,73 +96,52 @@ header .importantLinks .links {
       -ms-flex-pack: center;
           justify-content: center;
   color: #fff;
+  padding: 0 10px;
 }
 
-header .importantLinks .links i {
+header .importantLinks .links i, header .importantLinks .links a {
   font-size: 13px;
   margin: 0 5px;
   -webkit-transition: .3s;
   transition: .3s;
+  color: #fff;
 }
 
-header .importantLinks .links i:hover {
+header .importantLinks .links i:hover, header .importantLinks .links a:hover {
   margin-left: 10px;
 }
 
-header .importantLinks .search {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  height: 100%;
-  -webkit-transform: translateX(-110%);
-          transform: translateX(-110%);
-  -webkit-transition: -webkit-transform .3s;
-  transition: -webkit-transform .3s;
-  transition: transform .3s;
-  transition: transform .3s, -webkit-transform .3s;
-  z-index: 2;
+header .importantLinks .links .top {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: none;
 }
 
-header .importantLinks .search .input, header .importantLinks .search .btn {
-  padding: 5px;
-  border-radius: 0;
-  border: none;
-}
-
-header .importantLinks .search .btn {
-  cursor: pointer;
-}
-
-header .importantLinks .search.open {
-  -webkit-transform: translateX(0%);
-          transform: translateX(0%);
+header .importantLinks .links .bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: white;
 }
 
 header .importantLinks .event {
   cursor: pointer;
   position: absolute;
   top: 0;
-  right: 2%;
+  right: 5%;
   height: 100%;
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
+  height: 80px;
+  width: 80px;
+  -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+          clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
   z-index: 2;
 }
 
 header .importantLinks .event .image img {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
+  height: 80px;
+  width: 80px;
 }
 
 header .slider {
@@ -192,7 +171,7 @@ header .slider .slickItem .text {
   position: absolute;
   width: 230px;
   color: #fff;
-  top: 160px;
+  top: 150px;
   left: 16px;
   background-color: black;
   opacity: 0.5;
@@ -463,8 +442,9 @@ header .slider::after {
   transition: display .3s;
   pointer-events: painted;
   z-index: 500;
-  display: block;
+  display: none;
   background-color: #272727;
+  cursor: pointer;
 }
 
 .sticky .containers .holder .navigation .start {
@@ -595,7 +575,7 @@ header .slider::after {
   display: inline-block;
   padding: .5rem 1.3rem;
   font-size: .8rem;
-  border: 2px solid #6b002d;
+  background-color: #6b002d;
   border-radius: 2rem;
   line-height: 1;
   margin: 0 .2rem;
@@ -603,11 +583,6 @@ header .slider::after {
   transition: .3s;
   text-transform: uppercase;
   font-weight: bold;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-links:last-child .btn:hover {
-  color: #ffffff;
-  background-color: #6b002d;
 }
 
 /* Media Query Start */
@@ -621,6 +596,58 @@ header .slider::after {
   .containers {
     max-width: 800px;
   }
+  header {
+    margin: 0;
+    overflow: hidden;
+  }
+  header .importantLinks {
+    height: 10vh;
+    position: relative;
+  }
+  header .importantLinks .links {
+    left: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+  }
+  header .importantLinks .links .top, header .importantLinks .links .bottom {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .importantLinks .links i, header .importantLinks .links a {
+    font-size: 15px;
+    margin: 0 10px;
+    color: white;
+  }
+  header .importantLinks .links .bottom {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+  header .importantLinks .event {
+    right: 2%;
+    height: 100px;
+    width: 120px;
+    background-color: black;
+    -webkit-clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+            clip-path: polygon(25% 0%, 100% 0%, 75% 100%, 0% 100%);
+  }
+  header .importantLinks .event .image img {
+    height: 100px;
+    width: 120px;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -632,38 +659,14 @@ header .slider::after {
     overflow: hidden;
   }
   header .importantLinks {
-    height: 50px;
+    height: 10vh;
     position: relative;
   }
   header .importantLinks .links {
     left: 10%;
   }
-  header .importantLinks .links i {
-    font-size: 15px;
-    margin: 0 10px;
-  }
-  header .importantLinks .search {
-    top: 0;
-    left: 30%;
-    -webkit-transform: translateX(20%);
-            transform: translateX(20%);
-    opacity: 0;
-    z-index: 0;
-    pointer-events: none;
-  }
-  header .importantLinks .search.open {
-    opacity: 1;
-    z-index: 2;
-    pointer-events: visible;
-  }
   header .importantLinks .event {
     right: 10%;
-    height: 90px;
-    width: 90px;
-  }
-  header .importantLinks .event .image img {
-    height: 90px;
-    width: 90px;
   }
   header .slider {
     height: 70vh;
@@ -695,10 +698,12 @@ header .slider::after {
   }
   .sticky .containers .holder .image {
     top: 0px;
-    left: 6% !important;
+    left: 5% !important;
     width: 115px;
-    height: 115px;
+    height: 112px;
     z-index: 3;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
   }
   .sticky .containers .holder .image img {
     height: 100%;
@@ -759,6 +764,8 @@ header .slider::after {
         -ms-flex-align: center;
             align-items: center;
     background-color: white;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
     position: initial !important;
