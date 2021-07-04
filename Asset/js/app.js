@@ -19,7 +19,7 @@ $(document).ready(function() {
         console.log(this.children[1]);
         $(this.children[1]).toggleClass('active');
         $(this.lastElementChild).slideToggle();
-        //$('.mega').toggleClass('active');
+        $(this).toggleClass('active');
      });
 
      $('.toggles').click(function(){

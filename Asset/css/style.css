@@ -449,13 +449,6 @@ header .slider::after {
   width: 100%;
 }
 
-.sticky .containers .holder .navigation .start .links {
-  -webkit-box-flex: initial;
-      -ms-flex: initial;
-          flex: initial;
-  width: 100%;
-}
-
 .sticky .containers .holder .navigation .start .links .nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,15 +471,16 @@ header .slider::after {
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
   width: 100% !important;
   letter-spacing: 1px;
-  font-size: 17px;
+  font-size: 15px;
   -webkit-transition: .5s;
   transition: .5s;
   color: #fff;
   position: relative;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links a:hover {
-  color: chartreuse;
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
+  margin-left: 5px;
+  color: #860038;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
@@ -500,6 +494,12 @@ header .slider::after {
   -webkit-transition: .3s;
   transition: .3s;
   z-index: 2;
+}
+
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #6b002d;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .fas.fa-caret-down.active {
@@ -517,7 +517,8 @@ header .slider::after {
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
   height: 100%;
   width: 100%;
-  background-color: #008d6a;
+  padding: 10px;
+  background-color: #383838;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
@@ -535,12 +536,13 @@ header .slider::after {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
@@ -550,16 +552,15 @@ header .slider::after {
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
   padding: 5px 10px;
-  color: #fff;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li span {
-  color: white;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #838383;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
   color: #fff;
   margin-left: 5px;
+  font-size: 14px !important;
+  font-weight: 300;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover {
@@ -570,6 +571,10 @@ header .slider::after {
   color: #6b002d;
 }
 
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:last-child {
+  border: none;
+}
+
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one {
   background-color: #383838;
 }
@@ -578,22 +583,22 @@ header .slider::after {
   background-color: #383838;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links.active a {
   margin-left: 5px;
   color: #860038;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links.active i {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   color: #6b002d;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-links:last-child {
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:last-child {
   text-align: center;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-links:last-child .btn {
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:last-child .btn {
   display: inline-block;
   padding: .5rem 1.3rem;
   font-size: .7rem;
@@ -771,14 +776,8 @@ header .slider::after {
     margin: 0 auto;
     padding-left: 60px;
   }
-  .sticky .containers .holder .navigation .start .links {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
   .sticky .containers .holder .navigation .start .links .nav-ul {
-    height: 80%;
+    height: 100%;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -807,19 +806,18 @@ header .slider::after {
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
     position: unset !important;
-    color: #6b002d;
+    color: black;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
     position: absolute !important;
     left: 0 !important;
-    width: 60% !important;
+    width: 80% !important;
     right: 0;
     margin: 0 auto;
     top: 100%;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
     height: 100%;
-    background-color: #008d6a;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
     width: 100%;
@@ -832,32 +830,21 @@ header .slider::after {
             flex-direction: column;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
     width: 100%;
     height: 100%;
-    border: 1px solid #585858;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
     text-align: left;
-    padding: 5px 10px;
-    color: #fff;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li span {
-    color: white;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
-    color: #fff;
-    margin-left: 5px;
+    border: none;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
     margin-left: 2px;
@@ -874,88 +861,6 @@ header .slider::after {
   .sticky .containers .holder .navigation .start {
     width: 90%;
     padding-left: 60px;
-  }
-  .sticky .containers .holder .navigation .start .links {
-    -webkit-box-flex: 0;
-        -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-    max-width: 100%;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul {
-    height: 100%;
-    -webkit-box-orient: horizontal !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: row !important;
-            flex-direction: row !important;
-    position: relative !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    background-color: white;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
-            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
-    position: initial !important;
-    border: none;
-    padding: 5px 5px;
-    text-align: center;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
-    letter-spacing: 1px;
-    font-size: 15px;
-    -webkit-transition: .5s;
-    transition: .5s;
-    color: black;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
-    position: unset !important;
-    color: #6b002d;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
-    position: absolute !important;
-    left: 0 !important;
-    width: 60% !important;
-    right: 0;
-    margin: 0 auto;
-    top: 100%;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
-    height: 100%;
-    background-color: #008d6a;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
-    width: 100%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
-    width: 100%;
-    height: 100%;
-    border: 1px solid #585858;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
-    padding: 5px 10px;
-    color: #fff;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li span {
-    color: white;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
     color: #fff;
