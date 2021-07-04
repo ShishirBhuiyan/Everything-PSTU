@@ -149,7 +149,6 @@ header .slider {
   width: 100%;
   z-index: 1;
   position: relative;
-  background-color: aqua;
 }
 
 header .slider .slick-dots {
@@ -434,7 +433,6 @@ header .slider::after {
 .sticky .containers .holder .navigation {
   position: absolute;
   top: 100%;
-  /* --------------------------------- */
   width: 100%;
   left: 0;
   right: 0;
@@ -470,7 +468,7 @@ header .slider::after {
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
   width: 100%;
-  border-bottom: 1px solid #fff;
+  border-bottom: 1px solid #535353;
   -webkit-transition: .3s;
   transition: .3s;
   padding: 10px 10px;
@@ -484,6 +482,7 @@ header .slider::after {
   -webkit-transition: .5s;
   transition: .5s;
   color: #fff;
+  position: relative;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a:hover {
@@ -498,10 +497,19 @@ header .slider::after {
   transition: all 650ms;
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-transition: .3s;
+  transition: .3s;
   z-index: 2;
 }
 
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .fas.fa-caret-down.active {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #860038;
+}
+
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
+  margin-top: 10px;
   width: 100%;
   display: none;
 }
@@ -538,7 +546,6 @@ header .slider::after {
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
   width: 100%;
   height: 100%;
-  border: 1px solid #fff;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
@@ -555,16 +562,31 @@ header .slider::after {
   margin-left: 5px;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover a {
-  text-decoration: underline !important;
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover {
+  background-color: #2c2c2c;
+}
+
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover span {
+  color: #6b002d;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one {
-  background-color: #490311;
+  background-color: #383838;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
-  background-color: #034922;
+  background-color: #383838;
+}
+
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
+  margin-left: 5px;
+  color: #860038;
+}
+
+.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #6b002d;
 }
 
 .sticky .containers .holder .navigation .start .links .nav-links:last-child {
@@ -574,7 +596,7 @@ header .slider::after {
 .sticky .containers .holder .navigation .start .links .nav-links:last-child .btn {
   display: inline-block;
   padding: .5rem 1.3rem;
-  font-size: .8rem;
+  font-size: .7rem;
   background-color: #6b002d;
   border-radius: 2rem;
   line-height: 1;
@@ -583,6 +605,7 @@ header .slider::after {
   transition: .3s;
   text-transform: uppercase;
   font-weight: bold;
+  color: #fff;
 }
 
 /* Media Query Start */
@@ -698,12 +721,12 @@ header .slider::after {
   }
   .sticky .containers .holder .image {
     top: 0px;
-    left: 5% !important;
-    width: 115px;
-    height: 112px;
+    left: 0% !important;
+    width: 110px;
+    height: 110px;
     z-index: 3;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
-            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+    -webkit-box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 8px 0px rgba(0, 0, 0, 0.7);
   }
   .sticky .containers .holder .image img {
     height: 100%;
@@ -744,8 +767,9 @@ header .slider::after {
     background-color: #6b002d;
   }
   .sticky .containers .holder .navigation .start {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
+    padding-left: 60px;
   }
   .sticky .containers .holder .navigation .start .links {
     -webkit-box-flex: 0;
@@ -754,7 +778,7 @@ header .slider::after {
     max-width: 100%;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul {
-    height: 100%;
+    height: 80%;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -770,18 +794,16 @@ header .slider::after {
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
     position: initial !important;
     border: none;
-    padding: 5px 10px;
+    padding: 5px 5px;
+    text-align: center;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
-    width: 100% !important;
     letter-spacing: 1px;
-    font-size: 17px;
+    font-size: 15px;
     -webkit-transition: .5s;
     transition: .5s;
+    font-weight: bold;
     color: black;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a:hover {
-    color: chartreuse;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
     position: unset !important;
@@ -823,7 +845,110 @@ header .slider::after {
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
     width: 100%;
     height: 100%;
-    border: 1px solid #fff;
+    border: 1px solid #585858;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
+    text-align: left;
+    padding: 5px 10px;
+    color: #fff;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li span {
+    color: white;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
+    color: #fff;
+    margin-left: 5px;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
+    margin-left: 2px;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+    color: #6b002d;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .containers {
+    max-width: 1240px;
+  }
+  .sticky .containers .holder .navigation .start {
+    width: 90%;
+    padding-left: 60px;
+  }
+  .sticky .containers .holder .navigation .start .links {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    max-width: 100%;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul {
+    height: 100%;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    position: relative !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
+    position: initial !important;
+    border: none;
+    padding: 5px 5px;
+    text-align: center;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
+    letter-spacing: 1px;
+    font-size: 15px;
+    -webkit-transition: .5s;
+    transition: .5s;
+    color: black;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
+    position: unset !important;
+    color: #6b002d;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
+    position: absolute !important;
+    left: 0 !important;
+    width: 60% !important;
+    right: 0;
+    margin: 0 auto;
+    top: 100%;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
+    height: 100%;
+    background-color: #008d6a;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #585858;
   }
   .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
     padding: 5px 10px;
@@ -836,20 +961,19 @@ header .slider::after {
     color: #fff;
     margin-left: 5px;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover a {
-    text-decoration: underline !important;
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
+    margin-left: 2px;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one {
-    background-color: #490311;
+  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+    color: #6b002d;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
-    background-color: #034922;
+  .sticky .containers .holder {
+    overflow: visible;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  .containers {
-    max-width: 1240px;
+  .sticky .containers .holder .image {
+    width: 110px;
+    height: 107px;
+    left: 2% !important;
   }
 }
 

@@ -16,7 +16,8 @@ $(document).ready(function() {
 
     
     $(".nav-links.dropdown").click(function(){
-        console.log(this);
+        console.log(this.children[1]);
+        $(this.children[1]).toggleClass('active');
         $(this.lastElementChild).slideToggle();
         //$('.mega').toggleClass('active');
      });
@@ -24,6 +25,7 @@ $(document).ready(function() {
      $('.toggles').click(function(){
         $('.navigation').slideToggle();
         //$('.mega').toggleClass('active');
+        $(".toggles .line").toggleClass("active");
      });
 
 

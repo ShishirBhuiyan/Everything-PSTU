@@ -27,6 +27,7 @@
 
 @media screen and(min-width: 1200px){ //  --breakpoint-xl
     @include xl_container();
-    //@include xl_header();
+    @include xl_sticky_navigation();
+    @include xl_sticky_image();
 }
 /* Media Query End */
