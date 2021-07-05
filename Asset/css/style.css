@@ -440,177 +440,157 @@ header .slider::after {
   transition: display .3s;
   pointer-events: painted;
   z-index: 500;
-  display: none;
+  display: block;
+  cursor: pointer;
   background-color: #272727;
+}
+
+.sticky .containers .holder .navigation .main-ul {
+  width: 100% !important;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li {
+  position: relative;
+  width: 100% !important;
+  margin-bottom: 2px;
+  border-bottom: 1px solid #535353;
   cursor: pointer;
 }
 
-.sticky .containers .holder .navigation .start {
-  width: 100%;
+.sticky .containers .holder .navigation .main-ul li.main-li input {
+  display: none;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul {
+.sticky .containers .holder .navigation .main-ul li.main-li label {
+  width: 100% !important;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
-  width: 100%;
-  border-bottom: 1px solid #535353;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  cursor: pointer;
+  padding: 10px;
   -webkit-transition: .3s;
   transition: .3s;
-  padding: 10px 10px;
-  position: relative;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
-  width: 100% !important;
-  letter-spacing: 1px;
-  font-size: 15px;
-  -webkit-transition: .5s;
-  transition: .5s;
-  color: #fff;
-  position: relative;
+.sticky .containers .holder .navigation .main-ul li.main-li label span {
+  -webkit-transition: .3s;
+  transition: .3s;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
-  margin-left: 5px;
-  color: #860038;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
-  position: absolute;
-  color: #ffffff;
-  right: 12px;
-  -webkit-transition: all 650ms;
-  transition: all 650ms;
+.sticky .containers .holder .navigation .main-ul li.main-li label i {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
   -webkit-transition: .3s;
   transition: .3s;
+  color: white;
   z-index: 2;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+.sticky .containers .holder .navigation .main-ul li.main-li label.active {
+  background-color: black;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li label.active span {
+  margin-left: 5px;
+  color: #860038;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li label.active i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #6b002d !important;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li a {
+  width: 100% !important;
+  display: block;
+  color: #fff;
+  padding: 10px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li:hover > a {
+  margin-left: 5px;
+  color: #860038;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li:hover > label > i {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
   color: #6b002d;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .fas.fa-caret-down.active {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  color: #860038;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
-  margin-top: 10px;
-  width: 100%;
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns {
+  background-color: #383838;
   display: none;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li {
+  padding-left: 25px;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li i {
+  color: #fff;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > a {
+  margin-left: 5px;
+  color: #860038;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > label > i {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
+  color: #6b002d;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li ul.second {
+  display: none;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega {
+  display: none;
+  width: 100%;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents {
   height: 100%;
   width: 100%;
   padding: 10px;
   background-color: #383838;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth {
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul {
+  width: 100%;
+  height: 100%;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
 }
 
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
-  width: 100%;
-  height: 100%;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
-  padding: 5px 10px;
-  margin-bottom: 10px;
-  border-bottom: 1px solid #838383;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
-  color: #fff;
-  margin-left: 5px;
-  font-size: 14px !important;
-  font-weight: 300;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover {
-  background-color: #2c2c2c;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:hover span, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:hover span {
-  color: #6b002d;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li:last-child, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li:last-child {
-  border: none;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one {
-  background-color: #383838;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
-  background-color: #383838;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links.active a {
+.sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li:hover > a {
   margin-left: 5px;
   color: #860038;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links.active i {
-  -webkit-transform: rotate(-180deg);
-          transform: rotate(-180deg);
-  color: #6b002d;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:last-child {
-  text-align: center;
-}
-
-.sticky .containers .holder .navigation .start .links .nav-ul .nav-links:last-child .btn {
-  display: inline-block;
-  padding: .5rem 1.3rem;
-  font-size: .7rem;
-  background-color: #6b002d;
-  border-radius: 2rem;
-  line-height: 1;
-  margin: 0 .2rem;
-  -webkit-transition: .3s;
-  transition: .3s;
-  text-transform: uppercase;
-  font-weight: bold;
-  color: #fff;
 }
 
 /* Media Query Start */
@@ -767,17 +747,21 @@ header .slider::after {
     display: none;
   }
   .sticky .containers .holder .navigation {
-    display: block;
     z-index: 2 !important;
     background-color: #6b002d;
-  }
-  .sticky .containers .holder .navigation .start {
     width: 100%;
+    background-color: white;
+    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
+            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
     margin: 0 auto;
-    padding-left: 60px;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul {
+  .sticky .containers .holder .navigation .main-ul {
     height: 100%;
+    width: 80% !important;
+    margin: 0 auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-box-orient: horizontal !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: row !important;
@@ -786,91 +770,199 @@ header .slider::after {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    background-color: white;
-    -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
-            box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links {
+  .sticky .containers .holder .navigation .main-ul li.main-li {
+    margin-bottom: 0px;
     position: initial !important;
     border: none;
-    padding: 5px 5px;
     text-align: center;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links a {
-    letter-spacing: 1px;
-    font-size: 15px;
-    -webkit-transition: .5s;
-    transition: .5s;
-    font-weight: bold;
-    color: black;
+  .sticky .containers .holder .navigation .main-ul li.main-li label {
+    width: 100% !important;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links i {
-    position: unset !important;
+  .sticky .containers .holder .navigation .main-ul li.main-li label span {
     color: black;
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega {
-    position: absolute !important;
-    left: 0 !important;
-    width: 80% !important;
-    right: 0;
-    margin: 0 auto;
+  .sticky .containers .holder .navigation .main-ul li.main-li label i {
+    color: black;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li label.active {
+    background: none;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li label.active span {
+    margin-left: 0px !important;
+    color: #ba004e !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li label.active i {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    color: #ba004e !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li a {
+    width: 100% !important;
+    display: block;
+    color: black;
+    padding: 10px;
+    -webkit-transition: .3s;
+    transition: .3s;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega {
+    position: absolute;
+    width: 100%;
     top: 100%;
+    left: 0;
+    display: none;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents {
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents {
     height: 100%;
+    width: 100%;
+    padding: 10px;
+    background-color: #383838;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top {
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .top, .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .bottom {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: start;
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two {
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .top ul, .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .bottom ul {
     width: 100%;
     height: 100%;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li {
-    text-align: left;
-    border: none;
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .top ul li, .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .bottom ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
-    margin-left: 2px;
+  .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li .mega .contents .bottom ul li:hover > a {
+    margin-left: 5px;
+    color: #860038;
   }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
+  .sticky .containers .holder .navigation .main-ul li.main-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li:hover > a {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    margin-left: 5px;
+    color: #860038;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:hover > label > i {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
     color: #6b002d;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop {
+    position: relative !important;
+    text-align: left !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns {
+    background-color: #383838;
+    display: none;
+    position: absolute;
+    left: 0;
+    min-width: 300px;
+    width: 100%;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li {
+    position: relative !important;
+    padding: 0;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li a {
+    color: #fff;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li label span {
+    color: white;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li label i {
+    color: white;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li i {
+    color: #fff;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > a {
+    margin-left: 5px;
+    color: #ba004e;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li:hover > label > i {
+    -webkit-transform: rotate(-180deg);
+            transform: rotate(-180deg);
+    color: #ba004e;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns li.drop-li ul.second {
+    background-color: #383838;
+    width: 100%;
+    position: absolute !important;
+    left: 100% !important;
+    top: 0;
+    display: none;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 10px;
+    background-color: #383838;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    text-align: left;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li a {
+    color: #fff;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li:hover > a {
+    margin-left: 5px;
+    color: #860038;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child {
+    text-align: center;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn {
+    display: inline-block;
+    padding: .5rem 1.3rem;
+    font-size: .7rem;
+    background-color: #6b002d;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+    -webkit-transition: .3s;
+    transition: .3s;
+    text-transform: uppercase;
+    font-weight: bold;
+    color: #fff;
   }
 }
 
 @media screen and (min-width: 1200px) {
   .containers {
     max-width: 1240px;
-  }
-  .sticky .containers .holder .navigation .start {
-    width: 90%;
-    padding-left: 60px;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .first .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .second .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .third .two ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .one ul li a, .sticky .containers .holder .navigation .start .links .nav-ul .nav-links .mega .contents .top .fourth .two ul li a {
-    color: #fff;
-    margin-left: 5px;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover a {
-    margin-left: 2px;
-  }
-  .sticky .containers .holder .navigation .start .links .nav-ul .nav-links:hover i {
-    color: #6b002d;
   }
   .sticky .containers .holder {
     overflow: visible;

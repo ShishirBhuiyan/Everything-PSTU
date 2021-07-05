@@ -14,19 +14,25 @@ $(document).ready(function() {
         
     });
 
-    
-    $(".nav-links.dropdown").click(function(){
-        console.log(this.children[1]);
-        $(this.children[1]).toggleClass('active');
-        $(this.lastElementChild).slideToggle();
-        $(this).toggleClass('active');
-     });
-
-     $('.toggles').click(function(){
+    // Toggle Navigation
+    $('.toggles').click(function(){
         $('.navigation').slideToggle();
-        //$('.mega').toggleClass('active');
         $(".toggles .line").toggleClass("active");
-     });
+    });
+
+
+
+    // Togggle Dropdown & Mega Menu
+    $('input[type="checkbox"]').change(function(){
+        if($(this).prop("checked") == true){
+            $(this.nextElementSibling).addClass('active');
+            $(this.parentElement.lastElementChild).slideDown();
+        }
+        else if($(this).prop("checked") == false){
+            $(this.nextElementSibling).removeClass('active');
+            $(this.parentElement.lastElementChild).slideUp();
+        }
+    });
 
 
 });
