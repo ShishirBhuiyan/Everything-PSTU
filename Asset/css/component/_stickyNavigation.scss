@@ -105,11 +105,13 @@
                             .mega{
                                 display: none;
                                 width: 100%;
+                                height: 30vh;
+                                overflow-y: scroll;
+                                scrollbar-width: thin;
                                 .contents{
                                     height: 100%;
                                     width: 100%;
                                     padding: 10px;
-                                    background-color: rgb(56, 56, 56);
                                     .top,.bottom{
                                         width: 100%;
                                         display: flex;
@@ -152,7 +154,7 @@
                     margin: 0 auto;
                         .main-ul{
                             height: 100%;
-                            width: 80% !important;
+                            width: 70% !important;
                             margin: 0 auto;
                             display: flex;
                             flex-direction: row !important;
@@ -298,6 +300,7 @@
                             }
                             li.main-li.megas{  
                                 .mega{
+                                    overflow-y: hidden;
                                     .contents{
                                         display: flex;
                                         padding: 10px;

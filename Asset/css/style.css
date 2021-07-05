@@ -558,13 +558,15 @@ header .slider::after {
 .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega {
   display: none;
   width: 100%;
+  height: 30vh;
+  overflow-y: scroll;
+  scrollbar-width: thin;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents {
   height: 100%;
   width: 100%;
   padding: 10px;
-  background-color: #383838;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom {
@@ -757,7 +759,7 @@ header .slider::after {
   }
   .sticky .containers .holder .navigation .main-ul {
     height: 100%;
-    width: 80% !important;
+    width: 70% !important;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -917,6 +919,9 @@ header .slider::after {
     left: 100% !important;
     top: 0;
     display: none;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega {
+    overflow-y: hidden;
   }
   .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents {
     display: -webkit-box;
