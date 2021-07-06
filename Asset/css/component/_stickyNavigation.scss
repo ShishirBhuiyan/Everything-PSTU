@@ -10,16 +10,20 @@
                 transition: display .3s;
                 pointer-events: painted;
                 z-index: 500;
-                display: block;
+                display: none;
                 cursor: pointer;
-                background-color: #272727;
+                background-color: #003029;
+                max-height: 55vh !important;
+                overflow-y: auto;
+                overflow-x:hidden;
+                scrollbar-width: thin;
                     .main-ul{
                         width: 100% !important;
                         li.main-li{
                             position: relative;
                             width: 100% !important;
                             margin-bottom: 2px;
-                            border-bottom: 1px solid #535353;
+                            border-bottom: 1px solid #868686;
                             cursor: pointer;
                             input{
                                 display: none;
@@ -33,47 +37,50 @@
                                 padding: 10px;
                                 transition: .3s;
                                 span{
+                                 color: rgb(255, 255, 255);
                                  transition: .3s;
+                                 font-weight: 400;
                                 }
                                 i{
                                     transform: rotate(0deg);
                                     transition: .3s;
-                                    color: white;
+                                    color: rgb(255, 255, 255);
                                     z-index: 2;
                                 }
                             }
 
                             label.active{
-                                background-color: black;
+                                background-color: #500222;
                                 span{
                                     margin-left: 5px;
-                                    color: #860038;
+                                    color: #ffffff !important;
                                 }
                                 i{
                                     transform: rotate(-180deg);
-                                    color: #6b002d !important;
+                                    color: #ffffff !important;
                                 }
                             }
                             
                             a{
                                 width: 100% !important;
                                 display: block;
-                                color: #fff;
+                                color: rgb(255, 255, 255);
                                 padding: 10px;
                                 transition: .3s;
+                                font-weight: 400;
                             }
                                 
                               
 
-
+                           &:hover{  
+                               background-color: #01443a;
+                           }
                             &:hover > label > span, &:hover > a{
                                 margin-left: 5px;
-                                color: #860038;
                             }
 
                             &:hover > label > i{
                                 transform: rotate(-180deg);
-                                color: #6b002d;
                             }
                         }
                         li.main-li.drop{
@@ -103,6 +110,7 @@
                         }
                         li.main-li.megas{  
                             .mega{
+                                background-color: rgb(56, 56, 56);
                                 display: none;
                                 width: 100%;
                                 height: 30vh;
@@ -131,9 +139,51 @@
                                 }
                             }
                         }
+                        li.main-li:last-child{
+                            text-align: center;
+                            border: none;
+                            padding: 10px 100px;
+                            .btn{
+                                display: inline-block;
+                                padding: .5rem 1.3rem;
+                                font-size: .7rem;
+                                background-color:  #6b002d;
+                                border-radius: 2rem;
+                                line-height: 1;
+                                margin: 0 .2rem;
+                                transition: .3s;
+                                text-transform: uppercase;
+                                font-weight: bold;
+                                color: #ffffff;
+                            }
+                        }
                     }
                 
             }
+
+            /* Works on Firefox*/
+            .navigation{
+                scrollbar-width: thin;
+                scrollbar-color: #f5f1f3 #003029;
+            }
+              
+              /* Works on Chrome, Edge, and Safari */
+              .navigation::-webkit-scrollbar {
+                width: 10px;
+              }
+              .navigation::-webkit-scrollbar-button {
+                width: 17px;
+                height: 17px;
+              }
+              .navigation::-webkit-scrollbar-track {
+                background: #003029;
+              }
+              
+              .navigation::-webkit-scrollbar-thumb {
+                background-color: #f5f1f3;
+                border-radius: 20px;
+                border: 2px solid #003029;
+              }
         }
     }
 }
@@ -322,22 +372,6 @@
                                             }
                                         }
                                     }
-                                }
-                            }
-                            li.main-li:last-child{
-                                text-align: center;
-                                .btn{
-                                    display: inline-block;
-                                    padding: .5rem 1.3rem;
-                                    font-size: .7rem;
-                                    background-color:  rgb(107, 0, 45);
-                                    border-radius: 2rem;
-                                    line-height: 1;
-                                    margin: 0 .2rem;
-                                    transition: .3s;
-                                    text-transform: uppercase;
-                                    font-weight: bold;
-                                    color: #fff;
                                 }
                             }
                         }

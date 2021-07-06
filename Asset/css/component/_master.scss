@@ -9,9 +9,10 @@
 
 /* ======== Global Start ========= */
 html{
-	overflow-x: hidden;
     scroll-behavior: smooth;
 }
+/* Works on Firefox */
+
 a,
 a:hover {
 	text-decoration: none !important;

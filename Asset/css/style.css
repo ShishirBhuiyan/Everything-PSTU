@@ -7,10 +7,10 @@
 
 /* ======== Global Start ========= */
 html {
-  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
+/* Works on Firefox */
 a,
 a:hover {
   text-decoration: none !important;
@@ -430,6 +430,11 @@ header .slider::after {
           transform: rotate(-45deg) translate(22px, 22px);
 }
 
+.sticky .containers .holder {
+  /* Works on Firefox*/
+  /* Works on Chrome, Edge, and Safari */
+}
+
 .sticky .containers .holder .navigation {
   position: absolute;
   top: 100%;
@@ -440,9 +445,13 @@ header .slider::after {
   transition: display .3s;
   pointer-events: painted;
   z-index: 500;
-  display: block;
+  display: none;
   cursor: pointer;
-  background-color: #272727;
+  background-color: #003029;
+  max-height: 55vh !important;
+  overflow-y: auto;
+  overflow-x: hidden;
+  scrollbar-width: thin;
 }
 
 .sticky .containers .holder .navigation .main-ul {
@@ -453,7 +462,7 @@ header .slider::after {
   position: relative;
   width: 100% !important;
   margin-bottom: 2px;
-  border-bottom: 1px solid #535353;
+  border-bottom: 1px solid #868686;
   cursor: pointer;
 }
 
@@ -479,8 +488,10 @@ header .slider::after {
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li label span {
+  color: white;
   -webkit-transition: .3s;
   transition: .3s;
+  font-weight: 400;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li label i {
@@ -493,38 +504,41 @@ header .slider::after {
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li label.active {
-  background-color: black;
+  background-color: #500222;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li label.active span {
   margin-left: 5px;
-  color: #860038;
+  color: #ffffff !important;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li label.active i {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  color: #6b002d !important;
+  color: #ffffff !important;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li a {
   width: 100% !important;
   display: block;
-  color: #fff;
+  color: white;
   padding: 10px;
   -webkit-transition: .3s;
   transition: .3s;
+  font-weight: 400;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li:hover {
+  background-color: #01443a;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li:hover > a {
   margin-left: 5px;
-  color: #860038;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li:hover > label > i {
   -webkit-transform: rotate(-180deg);
           transform: rotate(-180deg);
-  color: #6b002d;
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li.drop ul.dropdowns {
@@ -556,6 +570,7 @@ header .slider::after {
 }
 
 .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega {
+  background-color: #383838;
   display: none;
   width: 100%;
   height: 30vh;
@@ -593,6 +608,51 @@ header .slider::after {
 .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li:hover > a {
   margin-left: 5px;
   color: #860038;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li:last-child {
+  text-align: center;
+  border: none;
+  padding: 10px 100px;
+}
+
+.sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn {
+  display: inline-block;
+  padding: .5rem 1.3rem;
+  font-size: .7rem;
+  background-color: #6b002d;
+  border-radius: 2rem;
+  line-height: 1;
+  margin: 0 .2rem;
+  -webkit-transition: .3s;
+  transition: .3s;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.sticky .containers .holder .navigation {
+  scrollbar-width: thin;
+  scrollbar-color: #f5f1f3 #003029;
+}
+
+.sticky .containers .holder .navigation::-webkit-scrollbar {
+  width: 10px;
+}
+
+.sticky .containers .holder .navigation::-webkit-scrollbar-button {
+  width: 17px;
+  height: 17px;
+}
+
+.sticky .containers .holder .navigation::-webkit-scrollbar-track {
+  background: #003029;
+}
+
+.sticky .containers .holder .navigation::-webkit-scrollbar-thumb {
+  background-color: #f5f1f3;
+  border-radius: 20px;
+  border: 2px solid #003029;
 }
 
 /* Media Query Start */
@@ -945,23 +1005,6 @@ header .slider::after {
   .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li:hover > a {
     margin-left: 5px;
     color: #860038;
-  }
-  .sticky .containers .holder .navigation .main-ul li.main-li:last-child {
-    text-align: center;
-  }
-  .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn {
-    display: inline-block;
-    padding: .5rem 1.3rem;
-    font-size: .7rem;
-    background-color: #6b002d;
-    border-radius: 2rem;
-    line-height: 1;
-    margin: 0 .2rem;
-    -webkit-transition: .3s;
-    transition: .3s;
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #fff;
   }
 }
 
