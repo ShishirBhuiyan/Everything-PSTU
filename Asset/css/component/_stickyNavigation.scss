@@ -15,7 +15,6 @@
                 background-color: #003029;
                 max-height: 55vh !important;
                 overflow-y: auto;
-                overflow-x:hidden;
                 scrollbar-width: thin;
                     .main-ul{
                         width: 100% !important;
@@ -167,23 +166,23 @@
                 scrollbar-color: #f5f1f3 #003029;
             }
               
-              /* Works on Chrome, Edge, and Safari */
-              .navigation::-webkit-scrollbar {
-                width: 10px;
-              }
-              .navigation::-webkit-scrollbar-button {
-                width: 17px;
-                height: 17px;
-              }
-              .navigation::-webkit-scrollbar-track {
-                background: #003029;
-              }
-              
-              .navigation::-webkit-scrollbar-thumb {
-                background-color: #f5f1f3;
-                border-radius: 20px;
-                border: 2px solid #003029;
-              }
+            /* Works on Chrome, Edge, and Safari */
+            .navigation::-webkit-scrollbar {
+            width: 10px;
+            }
+            .navigation::-webkit-scrollbar-button {
+            width: 17px;
+            height: 17px;
+            }
+            .navigation::-webkit-scrollbar-track {
+            background: #003029;
+            }
+            
+            .navigation::-webkit-scrollbar-thumb {
+            background-color: #f5f1f3;
+            border-radius: 20px;
+            border: 2px solid #003029;
+            }
         }
     }
 }
@@ -202,9 +201,12 @@
                     background-color: rgb(255, 255, 255);
                     box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
                     margin: 0 auto;
+                    display: block;
+                    max-height: 100% !important;
+                    overflow:visible;
                         .main-ul{
                             height: 100%;
-                            width: 70% !important;
+                            width: 80% !important;
                             margin: 0 auto;
                             display: flex;
                             flex-direction: row !important;
@@ -287,6 +289,9 @@
                                 }
     
     
+                                &:hover{  
+                                    background:none;
+                                }
                                 &:hover > label > span, &:hover > a{
                                     transform: scale(1.1);
                                     margin-left: 5px;
@@ -372,6 +377,20 @@
                                             }
                                         }
                                     }
+                                }
+                            }
+                            li.main-li:last-child{
+                                padding: 0px;
+                                .btn{
+                                    padding: .5rem 1.3rem;
+                                    background-color:  #6b002d;
+                                    border-radius: 2rem;
+                                    line-height: 1;
+                                    margin: 0 .2rem;
+                                }
+                                
+                                &:hover > a.btn{  
+                                    transform: scale(1) !important;
                                 }
                             }
                         }

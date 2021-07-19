@@ -450,7 +450,6 @@ header .slider::after {
   background-color: #003029;
   max-height: 55vh !important;
   overflow-y: auto;
-  overflow-x: hidden;
   scrollbar-width: thin;
 }
 
@@ -816,10 +815,13 @@ header .slider::after {
     -webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
             box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.7);
     margin: 0 auto;
+    display: block;
+    max-height: 100% !important;
+    overflow: visible;
   }
   .sticky .containers .holder .navigation .main-ul {
     height: 100%;
-    width: 70% !important;
+    width: 80% !important;
     margin: 0 auto;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -922,6 +924,9 @@ header .slider::after {
     margin-left: 5px;
     color: #860038;
   }
+  .sticky .containers .holder .navigation .main-ul li.main-li:hover {
+    background: none;
+  }
   .sticky .containers .holder .navigation .main-ul li.main-li:hover > label > span, .sticky .containers .holder .navigation .main-ul li.main-li:hover > a {
     -webkit-transform: scale(1.1);
             transform: scale(1.1);
@@ -1005,6 +1010,20 @@ header .slider::after {
   .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .top ul li:hover > a, .sticky .containers .holder .navigation .main-ul li.main-li.megas .mega .contents .bottom ul li:hover > a {
     margin-left: 5px;
     color: #860038;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child {
+    padding: 0px;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn {
+    padding: .5rem 1.3rem;
+    background-color: #6b002d;
+    border-radius: 2rem;
+    line-height: 1;
+    margin: 0 .2rem;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child:hover > a.btn {
+    -webkit-transform: scale(1) !important;
+            transform: scale(1) !important;
   }
 }
 
