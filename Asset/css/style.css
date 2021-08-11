@@ -1020,10 +1020,28 @@ header .slider::after {
     border-radius: 2rem;
     line-height: 1;
     margin: 0 .2rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
-  .sticky .containers .holder .navigation .main-ul li.main-li:last-child:hover > a.btn {
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn span, .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn i {
+    color: #fff !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child .btn i {
+    color: #fff !important;
+    font-weight: bold !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child:hover > .btn {
     -webkit-transform: scale(1) !important;
             transform: scale(1) !important;
+  }
+  .sticky .containers .holder .navigation .main-ul li.main-li:last-child:hover > .btn span, .sticky .containers .holder .navigation .main-ul li.main-li:last-child:hover > .btn i {
+    color: #fff !important;
   }
 }
 

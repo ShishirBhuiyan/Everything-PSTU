@@ -387,10 +387,23 @@
                                     border-radius: 2rem;
                                     line-height: 1;
                                     margin: 0 .2rem;
+                                    display: flex;
+                                    align-items: center;
+                                    justify-content: space-around;
+                                    span,i{
+                                        color: #fff !important;
+                                    }
+                                    i{
+                                        color: #fff !important;
+                                        font-weight: bold !important;
+                                    }
                                 }
                                 
-                                &:hover > a.btn{  
+                                &:hover > .btn{  
                                     transform: scale(1) !important;
+                                    span,i{
+                                        color: #fff !important;
+                                    }
                                 }
                             }
                         }
